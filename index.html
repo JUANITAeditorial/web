@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Juanita | Libros para Colorear, Leer y Crear ✨</title>
+  <meta name="description" content="Editorial infantil Juanita: libros para leer y colorear sobre la vida de los santos con canciones, cuentos ilustrados y material pedagógico infantil.">
+  
+  <!-- Favicon animado: Manito naranja -->
+  <link rel="icon" type="image/png" id="siteFavicon" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================================================================= -->
+  <!-- CANVAS GLOBAL DE FONDO ANIMADO POR SCROLL (TODA LA PÁGINA)       -->
+  <!-- ================================================================= -->
+  <div class="global-canvas-wrapper" aria-hidden="true">
+    <canvas id="globalScrollCanvas" class="global-scroll-canvas"></canvas>
+  </div>
+
+  <!-- Barra superior de anuncios -->
+  <div class="top-announcement">
+    <span>✨ <strong>Colección La Vida de los Santos:</strong> ¡6 Libros por $90.000 con Caja de 12 Colores de regalo y caja especial para regalo! 🎨🎁</span>
+  </div>
+
+  <!-- Header Flotante con el menú: COLOREA | LEE | CREA | CLUB | JUANITA -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Editorial Juanita - Inicio">
+        <img src="assets/juanita-logo.png" alt="Editorial Juanita Logo" class="logo-img">
+      </a>
+
+      <!-- Menú: COLOREA | LEE | CREA | CLUB | JUANITA -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#colorear" class="nav-link">COLOREA</a></li>
+          <li><a href="#para-leer" class="nav-link">LEE</a></li>
+          <li><a href="#rincon-creativo" class="nav-link">CREA</a></li>
+          <li><a href="#club" class="nav-link">CLUB</a></li>
+          <li><a href="#el-toque-juanita" class="nav-link">JUANITA</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#colorear" class="btn btn-primary btn-header">
+          <span>Ver Colección</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Botón Hamburguesa Móvil -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================================= -->
+    <!-- HERO INICIAL (GLOBO DE CRISTAL SIN DEGRADADO DE FONDO)            -->
+    <!-- ================================================================= -->
+    <section class="hero hero-section" id="hero">
+      
+      <!-- Luces parpadeantes sobre el hero -->
+      <div class="fairy-lights-overlay" aria-hidden="true">
+        <span class="fairy-dot dot-1"></span>
+        <span class="fairy-dot dot-2"></span>
+        <span class="fairy-dot dot-3"></span>
+        <span class="fairy-dot dot-4"></span>
+        <span class="fairy-dot dot-5"></span>
+        <span class="fairy-dot dot-6"></span>
+      </div>
+
+      <!-- Globo de Cristal del Hero -->
+      <div class="hero-left-content">
+        <div class="hero-speech-bubble">
+          
+          <div class="hero-badge">
+            <span class="badge-icon">✨</span>
+            <span class="badge-text">EDITORIAL DE LITERATURA INFANTIL</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hay historias que despiertan <span class="serif-highlight">un mundo infinito.</span>
+          </h1>
+
+          <p class="hero-description">
+            Santuarios de lectura, libros para pintar con canciones e historias ilustradas que acompañan los primeros pasos de pequeños grandes soñadores.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#colorear" class="btn btn-hero-primary">
+              <span>Para Colorear</span>
+              <span class="btn-spark">🎨</span>
+            </a>
+            <a href="#para-leer" class="btn btn-hero-secondary">
+              <span class="book-icon">📖</span>
+              <span>Para Leer</span>
+            </a>
+          </div>
+
+          <!-- Indicador interactivo de animación global por scroll -->
+          <div class="scroll-magic-indicator">
+            <div class="scroll-mouse-icon">
+              <div class="scroll-wheel"></div>
+            </div>
+            <div class="scroll-indicator-text">
+              <strong>Animación interactiva en todo el sitio</strong>
+              <small>Desliza hacia abajo para recorrer toda la historia ✨</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Barra inferior métrica -->
+      <div class="hero-footer-bar">
+        <div class="hero-metric-item">
+          <span class="metric-icon">🎨</span>
+          <div class="metric-info">
+            <strong>COLOREA & CANTA</strong>
+            <small>Canciones y dibujos en cada libro</small>
+          </div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="hero-metric-item">
+          <span class="metric-icon">🌟</span>
+          <div class="metric-info">
+            <strong>VIDA DE LOS SANTOS</strong>
+            <small>Historias ejemplares y valores</small>
+          </div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="hero-metric-item">
+          <span class="metric-icon">🎵</span>
+          <div class="metric-info">
+            <strong>CANCIONES INCLUIDAS</strong>
+            <small>Código QR con música orquestada</small>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 1. SECCIÓN: COLOREAR (6 LIBROS DE SANTOS 3D A $15.000)            -->
+    <!-- ================================================================= -->
+    <section class="section saints-coloring-section" id="colorear">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag tag-rainbow">🎨 Colección Estrella</span>
+          <h2 class="section-title">Libros para <span class="rainbow-text">COLOREAR</span> y Cantar</h2>
+          <div class="section-subtitle-banner">
+            <span class="banner-ribbon">La vida de los Santos</span>
+          </div>
+          <p class="section-subtitle">
+            Cada libro incluye la biografía ilustrada y páginas para colorear, además una canción original para escuchar con código QR mientras pintan.
+          </p>
+        </div>
+
+        <!-- Rejilla con los 6 libros oficiales en 3D -->
+        <div class="saints-grid" id="saintsGrid">
+          
+          <!-- 1. SAN CARLO ACUTIS -->
+          <article class="saint-card featured-saint-card" data-saint="carlo">
+            <div class="popular-ribbon">⭐ Más Querido por Niños</div>
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🎵</span>
+              <span class="note n2">🎮</span>
+              <span class="note n3">✨</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-carlo-acutis.jpg" alt="San Carlo Acutis en 3D con su libro Coloreando y Cantando" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🎒 Ciberapóstol de la Eucaristía</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">San Carlo Acutis</h3>
+              <p class="saint-quote">“La Eucaristía es mi autopista hacia el Cielo.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('carlo')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. SANTA TERESA DEL NIÑO JESÚS -->
+          <article class="saint-card" data-saint="teresita">
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🌹</span>
+              <span class="note n2">🎶</span>
+              <span class="note n3">✨</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-teresita.jpg" alt="Santa Teresa del Niño Jesús en 3D con rosas y su libro" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🌹 Lluvia de Rosas & Ternura</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">Santa Teresa del Niño Jesús</h3>
+              <p class="saint-quote">“Hacer las cosas más pequeñas con un amor inmensamente grande.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('teresita')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. SAN PADRE PÍO -->
+          <article class="saint-card" data-saint="padrepio">
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🕊️</span>
+              <span class="note n2">🎶</span>
+              <span class="note n3">✨</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-padre-pio.jpg" alt="San Padre Pío en 3D con su libro Coloreando y Cantando" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🕊️ Oración, Paz & Ángel Custodio</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">San Padre Pío</h3>
+              <p class="saint-quote">“Reza, ten fe y no te preocupes. Dios cuida siempre de ti.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('padrepio')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. SAN JUAN PABLO II -->
+          <article class="saint-card" data-saint="juanpablo">
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🌍</span>
+              <span class="note n2">🎶</span>
+              <span class="note n3">✨</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-juan-pablo-ii.jpg" alt="San Juan Pablo II en 3D saludando con su libro" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🌍 Peregrino de Paz & Amigo Infantil</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">San Juan Pablo II</h3>
+              <p class="saint-quote">“¡No tengáis miedo! Abrid las puertas del corazón al amor.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('juanpablo')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. SANTA LAURA MONTOYA -->
+          <article class="saint-card" data-saint="laura">
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🌿</span>
+              <span class="note n2">🎶</span>
+              <span class="note n3">✨</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-laura-montoya.jpg" alt="Santa Laura Montoya en 3D con su libro Coloreando y Cantando" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🇨🇴 Primera Santa de Colombia</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">Santa Laura Montoya</h3>
+              <p class="saint-quote">“Sembradora de fe, amor por la selva y las comunidades indígenas.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('laura')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. SAN MARTÍN DE PORRES -->
+          <article class="saint-card" data-saint="martin">
+            <div class="card-music-notes" aria-hidden="true">
+              <span class="note n1">🐶</span>
+              <span class="note n2">🐱</span>
+              <span class="note n3">🐭</span>
+            </div>
+
+            <div class="saint-3d-scene-wrap">
+              <img src="assets/card-martin-porres.jpg" alt="San Martín de Porres en 3D con su escoba y su libro Coloreando y Cantando" class="saint-3d-scene-img" loading="lazy">
+              <span class="saint-scene-badge">🐾 Amigo de los Animalitos</span>
+            </div>
+
+            <div class="saint-card-body">
+              <div class="saint-card-header">
+                <span class="book-pill">Libro + canción</span>
+              </div>
+
+              <h3 class="saint-book-title">San Martín de Porres</h3>
+              <p class="saint-quote">“La escoba de la humildad y el plato compartido con todos.”</p>
+              
+              <div class="saint-perks">
+                <span>🌟 La vida de tu Santo favorito en una canción.</span>
+                <span>📄 36 páginas</span>
+                <span>🖍️ 16 Escenas para colorear.</span>
+                <span>🎵 Una canción para cantar y aprender.</span>
+              </div>
+
+              <div class="saint-card-footer">
+                <div class="saint-price">
+                  <strong>$15.000</strong>
+                  <small>Libro físico ilustrado</small>
+                </div>
+                <div class="saint-actions">
+                  <button class="btn-card-action" onclick="openSaintModal('martin')">
+                    <span>Ver Libro</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- PACK COMPLETO DE COLECCIÓN: $90.000 CON FOTO REAL DE LA COLECCIÓN -->
+        <div class="collection-pack-card">
+          <div class="pack-badge">🎁 Colección Completa de Santos</div>
+          <div class="pack-layout">
+            
+            <!-- Fotografía real del kit y caja especial -->
+            <div class="pack-real-photo-wrap">
+              <img src="assets/pack-coleccion-santos.jpg" alt="Fotografía real de la Colección de Santos con caja para regalo y colores" class="pack-real-photo-img">
+              <span class="pack-photo-badge">📸 Kit Real Completo</span>
+            </div>
+
+            <div class="pack-info">
+              <h3>Lleva los 6 Libros de la Colección de Santos</h3>
+              
+              <!-- Resalte especial con caja de 12 colores y caja para regalo -->
+              <div class="colors-box-highlight">
+                <span class="colors-icon">🎁🎨</span>
+                <div class="colors-text">
+                  <strong>¡DE REGALO CON TU COLECCIÓN!</strong>
+                  <span>Te regalamos la <strong>Caja de 12 Lápices de Colores</strong> y viene en su <strong>caja especial para regalo</strong>.</span>
+                </div>
+              </div>
+
+              <p>Un kit lleno de fe, música y color para aprender, orar y disfrutar la vida de los Santos en familia.</p>
+              
+              <div class="pack-price-block">
+                <span class="pack-price">$90.000</span>
+                <span class="discount-badge">🎁 12 Colores + Caja Especial de Regalo Incluida</span>
+              </div>
+
+              <div class="pack-cta" style="margin-top: 18px;">
+                <button class="btn btn-pack-buy" onclick="alert('¡Has añadido la Colección Completa de 6 Libros de Santos + Caja de 12 Colores y Caja Especial de Regalo a tu carrito ($90.000)!')">
+                  <span>Comprar Colección Completa ($90.000)</span>
+                  <span>✨</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. SECCIÓN: LEE (FIORECILLAS DE LOS SANTOS - TOMO 1 - $40.000)     -->
+    <!-- ================================================================= -->
+    <section class="section catalog-section" id="para-leer">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">📖 Libro Destacado para Leer</span>
+          <h2 class="section-title">Vidas de Santos para Aprender</h2>
+          <p class="section-subtitle">
+            Historias ilustradas que fortalecen la fe, nos ayudan a fortalecer las virtudes y además el amor por la lectura.
+          </p>
+        </div>
+
+        <!-- Escaparate Destacado de Fiorecillas de los Santos (Tomo 1) -->
+        <div class="featured-book-showcase">
+          
+          <!-- Contenedor Interactivo con animación Frontal <-> Contracubierta -->
+          <div class="book-interactive-flipper" id="fiorecillasFlipper" onclick="toggleBookSpineView()" title="Haz clic o pasa el cursor para ver la contracubierta del libro">
+            <div class="book-flipper-inner">
+              
+              <!-- Vista de Portada (Front) -->
+              <div class="book-face book-face-front">
+                <img src="assets/fiorecillas-front.jpg" alt="Portada del libro Fiorecillas de los Santos - Tomo 1" class="showcase-cover-img">
+                <span class="spine-hint-badge">🔄 Pasa el mouse para ver la contracubierta</span>
+              </div>
+
+              <!-- Vista de Contracubierta (Back) -->
+              <div class="book-face book-face-spine">
+                <img src="assets/fiorecillas-back.jpg" alt="Contracubierta del libro Fiorecillas de los Santos - Tomo 1" class="showcase-cover-img">
+                <span class="spine-hint-badge active-hint">✨ Contracubierta</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Información y detalles del libro -->
+          <div class="featured-book-info">
+            <div class="book-meta-badges">
+              <span class="badge-gold">⭐ Obra Maestra Editorial</span>
+            </div>
+
+            <h3 class="featured-book-title">Fiorecillas de los Santos</h3>
+            <span class="featured-book-volume">Tomo 1 • Fiorecillas de Fe</span>
+            
+            <p class="featured-book-quote">
+              “Pequeñas historias de los Santos que florecen en el corazón de los niños, transmitiendo la belleza y la alegría de la santidad.”
+            </p>
+
+            <p class="featured-book-desc">
+              Una hermosa recopilación de relatos ilustrados sobre las vidas ejemplares de los santos. Especialmente para acompañar las noches de lectura en familia. Cada Florecilla contiene una ilustración, un episodio de la vida de un Santo, una reflexión y Una Oración.
+            </p>
+
+            <div class="featured-book-features">
+              <div class="feature-row">
+                <span class="f-icon">🌟</span>
+                <div>
+                  <strong>Historias de Santos</strong>
+                  <small>Lecturas amenas que inspiran valores de bondad, paz y coraje</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="featured-book-purchase-bar">
+              <div class="book-showcase-price">
+                <small>Precio Especial</small>
+                <strong>$40.000</strong>
+              </div>
+
+              <div class="showcase-actions">
+                <button class="btn btn-primary" style="padding: 14px 28px; font-size: 1.02rem;" onclick="alert('¡Has agregado «Fiorecillas de los Santos (Tomo 1)» a tu carrito de compras ($40.000)!')">
+                  <span>Añadir al Carrito ($40.000) 🛍️</span>
+                </button>
+                <button class="btn btn-secondary-pill" onclick="openFiorecillasSampleModal()">
+                  <span>📖 Ver Capítulo de Muestra</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. SECCIÓN: CREA (RINCÓN CREATIVO - DESCARGABLES GRATUITOS)       -->
+    <!-- ================================================================= -->
+    <section class="section resources-section" id="rincon-creativo">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Descargas Gratuitas</span>
+          <h2 class="section-title">El Rincón <span class="highlight-text">Creativo</span></h2>
+          <p class="section-subtitle">
+            Láminas de santos para colorear, actividades didácticas y marcapáginas recortables para imprimir gratis y disfrutar en familia o en la escuela.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          
+          <div class="resource-card">
+            <div class="resource-preview res-color-1">
+              <span class="res-badge">PDF Imprimible</span>
+              <div class="res-emoji">🖍️</div>
+              <p class="res-meta">6 láminas de Santos</p>
+            </div>
+            <div class="resource-body">
+              <h4>Láminas para Colorear: San Carlo & Santa Teresa</h4>
+              <p>Muestra gratuita de láminas en alta resolución listas para imprimir en tamaño carta.</p>
+              <a href="assets/muestra-actividades-juanita.pdf" download="Laminas_Santos_Colorear_Muestra.pdf" class="btn-download">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                <span>Descargar PDF Gratis</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-preview res-color-2">
+              <span class="res-badge">Guía Pedagógica</span>
+              <div class="res-emoji">🎵</div>
+              <p class="res-meta">Canciones y acordes</p>
+            </div>
+            <div class="resource-body">
+              <h4>Cancionero Infantil: La Vida de los Santos</h4>
+              <p>Letras con acordes sencillos y dibujos para cantar con los más pequeños en casa o en catequesis.</p>
+              <a href="assets/muestra-actividades-juanita.pdf" download="Cancionero_Infantil_Santos.pdf" class="btn-download">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                <span>Descargar PDF Gratis</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-preview res-color-3">
+              <span class="res-badge">Manualidad</span>
+              <div class="res-emoji">✂️</div>
+              <p class="res-meta">Plantilla recortable</p>
+            </div>
+            <div class="resource-body">
+              <h4>Marcapáginas de Santos Recortables</h4>
+              <p>Separadores de libros con Santa Laura, San Padre Pío, San Martín y San Juan Pablo II para colorear y recortar.</p>
+              <a href="assets/muestra-actividades-juanita.pdf" download="Marcapaginas_Santos.pdf" class="btn-download">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                <span>Descargar PDF Gratis</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. SECCIÓN: CLUB (COMUNIDAD DE WHATSAPP PEQUEÑOS LECTORES)         -->
+    <!-- ================================================================= -->
+    <section class="section club-section" id="club">
+      <div class="section-container">
+        
+        <div class="club-box whatsapp-club-box">
+          <div class="club-glow" aria-hidden="true"></div>
+          
+          <div class="club-content">
+            <span class="club-pill whatsapp-pill">📲 Comunidad Exclusiva en WhatsApp</span>
+            <h2 class="club-title">Club de <span class="highlight-text">Pequeños Lectores</span></h2>
+            <p class="club-description">
+              ¡Vive con nosotros una gran aventura a través de la vida de los Santos! Únete a nuestra comunidad familiar en WhatsApp donde compartiremos contenido formativo y alegre para tus pequeños.
+            </p>
+
+            <div class="club-perks">
+              <div class="perk"><span class="perk-check">🌟</span> Relatos y vidas de santos periódicas</div>
+              <div class="perk"><span class="perk-check">🎨</span> Actividades y láminas descargables</div>
+              <div class="perk"><span class="perk-check">🚀</span> Primicias de nuevos lanzamientos</div>
+              <div class="perk"><span class="perk-check">💛</span> Comunidad 100% gratuita y segura</div>
+            </div>
+
+            <div class="whatsapp-cta-block">
+              <a href="https://wa.me/573193209422?text=Hola%2C%20quiero%20unirme%20al%20Club%20de%20Peque%C3%B1os%20Lectores%20de%20Editorial%20Juanita%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-join">
+                <span class="wa-icon">💬</span>
+                <span>Unirme al Club en WhatsApp</span>
+                <span class="wa-sparkle">✨</span>
+              </a>
+              <p class="club-microtext">WhatsApp: +57 319 320 9422 • Acceso directo e instantáneo.</p>
+            </div>
+          </div>
+
+          <div class="club-visual">
+            <div class="whatsapp-preview-card">
+              <div class="wa-chat-header">
+                <div class="wa-avatar">
+                  <img src="assets/favicon.png" alt="Juanita Editorial">
+                </div>
+                <div class="wa-chat-title">
+                  <strong>Club Pequeños Lectores 📚</strong>
+                  <small>+57 319 320 9422</small>
+                </div>
+              </div>
+
+              <div class="wa-chat-body">
+                <div class="wa-bubble incoming">
+                  <span class="wa-sender">Editorial Juanita 🌟</span>
+                  <p>¡Hola familias! Hoy les compartimos la historia de San Carlo Acutis y una nueva lámina para pintar 🎨✨</p>
+                  <span class="wa-time">Hoy • 9:00 AM</span>
+                </div>
+                <div class="wa-bubble incoming">
+                  <span class="wa-sender">Editorial Juanita 🎵</span>
+                  <p>🎧 Escuchemos juntos la canción «Mi Autopista al Cielo» con los niños.</p>
+                  <span class="wa-time">Hoy • 9:02 AM</span>
+                </div>
+              </div>
+
+              <div class="wa-badge-footer">
+                <span>Únete a cientos de familias lectoras 💛</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. SECCIÓN: JUANITA (FOTO DE JUANITA, TESTIMONIO & CANCIÓN)       -->
+    <!-- ================================================================= -->
+    <section class="section values-section" id="el-toque-juanita">
+      <div class="section-container">
+        
+        <div class="juanita-story-container">
+          
+          <div class="section-header text-center">
+            <span class="section-tag">Nuestra Historia</span>
+            <h2 class="section-title">Un propósito que nació de <span class="brand-word">una historia real</span></h2>
+          </div>
+
+          <div class="juanita-story-grid">
+            
+            <!-- Texto testimonial con el retrato oficial de Juanita -->
+            <div class="juanita-story-card">
+              
+              <!-- Retrato oficial de Juanita -->
+              <div class="juanita-portrait-block">
+                <div class="juanita-avatar-frame">
+                  <img src="assets/foto-juanita.jpg" alt="Foto de Juanita sonriendo" class="juanita-avatar-img">
+                </div>
+                <div class="juanita-avatar-text">
+                  <strong>Juanita</strong>
+                  <span>El corazón e inspiración de nuestra editorial ✨</span>
+                </div>
+              </div>
+
+              <p class="story-paragraph">
+                Hay historias que llegan sin avisar y terminan cambiándolo todo. El <strong>24 de junio de 2025</strong> nació Juanita, una niña profundamente anhelada que, en los misteriosos planos de Dios, llegó a nuestras vidas con un cromosoma adicional: el síndrome de Down.
+              </p>
+              
+              <p class="story-paragraph">
+                Su llegada estuvo rodeada de incertidumbre, una cirugía y días en cuidados intensivos. Fueron días de miedo y oración, pero también de esperanza. <strong>Y Juanita salió adelante.</strong>
+              </p>
+
+              <p class="story-paragraph">
+                Después de comenzar las terapias descubrimos nuevas formas de acompañarla: leer, colorear, descubrir, jugar y estimular cada pequeño paso. Entonces nació una pregunta: <em>¿y si todo esto pudiera convertirse también en una forma de sembrar la fe?</em>
+              </p>
+
+              <p class="story-paragraph">
+                Así nacieron canciones, historias, ilustraciones y materiales creados primero para ella. Lo que comenzó en nuestra casa empezó a llegar a otras familias. Así nació <strong>JUANITA Editorial</strong>: de una hija profundamente amada, de la fe que sostiene y del deseo de sembrar en cada niño semillas de aprendizaje, alegría y amor por Dios.
+              </p>
+
+              <div class="values-signature" style="margin-top: 24px;">
+                <img src="assets/juanita-logo.png" alt="Sello Juanita" class="signature-logo">
+                <div>
+                  <strong>Editorial Juanita</strong>
+                  <span>De una hija profundamente amada para el mundo entero</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video de YouTube con la canción -->
+            <div class="juanita-video-card">
+              <div class="video-card-header">
+                <span class="video-badge">🎵 Canción de la Historia</span>
+                <h4>Conoce la historia cantada de Juanita</h4>
+                <p>Una melodía entrañable que narra el milagro de amor y fe que dio vida a nuestra editorial.</p>
+              </div>
+
+              <!-- Reproductor con compatibilidad total e iframe embebido -->
+              <div class="video-responsive-wrapper" id="juanitaVideoWrapper">
+                <iframe 
+                  id="juanitaYoutubeIframe"
+                  src="https://www.youtube-nocookie.com/embed/Js1vGuiZRmg?enablejsapi=1&rel=0&modestbranding=1" 
+                  title="Historia de Juanita - Editorial Juanita" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="video-footer-caption">
+                <span>💛 <em>«De la fe que sostiene y el amor de una hija.»</em></span>
+                <button class="btn-yt-play-popup" onclick="openVideoModal('Js1vGuiZRmg', 'Historia de Juanita - Canción Oficial')">
+                  <span>▶ Reproducir en Pantalla Completa</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- MODAL PRINCIPAL: DETALLE DE SANTOS                                -->
+  <!-- ================================================================= -->
+  <div class="modal-backdrop" id="saintModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeSaintModal()" aria-label="Cerrar ventana emergente">✕</button>
+      
+      <div class="modal-body" id="modalSaintContent">
+        <!-- Contenido dinámico inyectado por JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL DE VIDEO POPUP PARA CANCIONES DE YOUTUBE                     -->
+  <!-- ================================================================= -->
+  <div class="modal-backdrop" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container video-modal-container">
+      <button class="modal-close" onclick="closeVideoModal()" aria-label="Cerrar video">✕</button>
+      <div class="modal-body" id="videoModalContent">
+        <!-- Iframe inyectado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL FLIPBOOK INTERACTIVO: CAPÍTULO DE MUESTRA (4 PÁGINAS)       -->
+  <!-- ================================================================= -->
+  <div class="modal-backdrop" id="sampleViewerModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container flipbook-modal-container">
+      <button class="modal-close" onclick="closeSampleViewerModal()" aria-label="Cerrar visor de páginas">✕</button>
+      <div class="modal-body" id="sampleViewerContent">
+        <!-- Flipbook inyectado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER EDITORIAL (LOGO GRANDE Y CENTRADO EN PRIMER BLOQUE)        -->
+  <!-- ================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Primer bloque centrado con logo grande -->
+      <div class="footer-brand-col">
+        <img src="assets/juanita-logo.png" alt="Editorial Juanita Logo" class="footer-logo">
+        <p class="footer-tagline">
+          Literatura y libros de colorear que siembran valores, fe y fantasía en los corazones de las nuevas generaciones.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="#colorear">COLOREA</a></li>
+          <li><a href="#para-leer">LEE</a></li>
+          <li><a href="#rincon-creativo">CREA</a></li>
+          <li><a href="#club">CLUB</a></li>
+          <li><a href="#el-toque-juanita">JUANITA</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Colegios & Parroquias</h4>
+        <ul>
+          <li><a href="#pedidos" onclick="alert('Solicita precios para catequesis y colegios en WhatsApp: +57 319 320 9422')">Packs para Catequesis y Escuelas</a></li>
+          <li><a href="#distribucion" onclick="alert('Librerías y distribuidores: +57 319 320 9422')">Distribución de Libros</a></li>
+          <li><a href="#rincon-creativo">Descarga de Material Didáctico</a></li>
+        </ul>
+      </div>
+
+      <!-- Sección Club WhatsApp en Footer -->
+      <div class="footer-col footer-club-col">
+        <h4>Club Pequeños Lectores 📲</h4>
+        <p>Únete gratis a nuestra comunidad de WhatsApp (+57 319 320 9422) para recibir historias, canciones y descargables.</p>
+        <a href="https://wa.me/573193209422?text=Hola%2C%20quiero%20unirme%20al%20Club%20de%20Peque%C3%B1os%20Lectores%20de%20Editorial%20Juanita%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="btn btn-footer-wa">
+          <span class="wa-icon">💬</span>
+          <span>Unirme al Club en WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>© 2026 Editorial Juanita S.A.S. Todos los derechos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="#">Política de Privacidad</a>
+          <span>•</span>
+          <a href="#">Términos y Condiciones</a>
+          <span>•</span>
+          <a href="#">Envíos y Devoluciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
